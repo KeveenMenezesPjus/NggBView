@@ -9,27 +9,30 @@ html {
 main {
   height: 100vh;
   max-height: 100vh;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
 }
 
 .sidebar {
-  width: 80px;
+  width: 70px;
   height: 100vh;
   transition: all 0.5s ease-in-out;
 }
 
 .sidebar span {
+  align-items: center;
   display: none;
+  transition: all 1s ease-in-out;
 }
 
-.sidebar.active {
-  width: 250px;
+.sidebar.active { 
+  width: 200px;
   transition: all 0.5s ease-in-out;
 }
 
 .sidebar.active span {
-  display: inline;
+  display: flex;
+  animation: aparecer 1s ease-out forwards;
 }
 
 .toggle-button.active i::before {
@@ -66,3 +69,39 @@ main {
 .bd-mode-toggle {
   z-index: 1500;
 }
+
+@keyframes aparecer {
+  from {  
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+
+.row {
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+@media (min-width: 1200px){
+.row-cols-md-4>* {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+.card {
+ justify-content: center;
+ display: flex;
+}
+
+.album .container .row .col:nth-of-type(2) .card {
+
+}
+
+
+
+
