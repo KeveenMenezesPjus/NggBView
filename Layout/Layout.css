@@ -1,9 +1,9 @@
 body {
-  min-height: 100vh;
+    min-height: 100vh;
 }
 
 html {
-  height: -webkit-fill-available;
+    height: -webkit-fill-available;
 }
 
 main {
